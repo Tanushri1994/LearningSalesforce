@@ -1,0 +1,25 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" 
+                access="global" controller="createContact" >
+      
+	<div class="demo-only demo-only--sizing slds-grid slds-wrap">
+        <div class="slds-size_1-of-2" >
+            <lightning:input  aura:id="fname" name="input1" label="Enter firstname" placeholder="type here..."/>   
+        </div>
+        <div class="slds-size_1-of-2">
+            <lightning:input  aura:id="lname" name="input2" label="Enter lastname" placeholder="type here..."/>
+        </div>
+        <div class="slds-size_1-of-2" >
+              <lightning:input type="email" aura:id="email" name="email3" placeholder="youraddress@company.com" label="Enter your Email " />
+     
+        </div>
+        <div class="slds-size_1-of-2">
+          <lightning:input type="tel" aura:id="phone" label="Enter Phone field with pattern matching" name="phone3" value="343-343-3434" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"/>
+        </div>
+        
+        <lightning:button variant="brand" label="Submit" title="Brand action" onclick="{! c.handleClick }" />
+    </div>   
+    
+ 
+  
+   
+</aura:component>

@@ -1,0 +1,12 @@
+<apex:page standardController="Opportunity" extensions="oppExtensionController" >
+  <apex:form >
+        <apex:pageBlock title="Opportunity List">
+        <apex:pageBlockTable value="{!oppList}" var="opp">  
+            <apex:column value="{!opp.Name}"/> 
+            <apex:column value="{!opp.ExpectedRevenue}"/> 
+            <apex:column value="{!opp.LeadSource}"/> 
+            <apex:column value="{!opp.CloseDate}"/> 
+         </apex:pageBlockTable>
+      </apex:pageBlock>
+    </apex:form>
+</apex:page>

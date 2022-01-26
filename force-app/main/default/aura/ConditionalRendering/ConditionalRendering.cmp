@@ -1,0 +1,16 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="CC" type="Boolean"/> 
+    <aura:attribute name="GO" type="Boolean"/>   
+    <lightning:button variant="brand-outline" label="Create Contact" title="Brand action" onclick="{! c.handleClick }" />
+    <lightning:button variant="brand-outline" label="Show Opportunities" title="Brand action" onclick="{! c.handleClick }" />
+    
+     <aura:if isTrue="{! v.CC}">
+         <c:createContactFromAccounts></c:createContactFromAccounts>
+    </aura:if>
+    
+    <aura:if isTrue="{! v.GO}">
+      <c:GrabOpportunities ></c:GrabOpportunities>  
+    </aura:if> 
+    
+   
+</aura:component>

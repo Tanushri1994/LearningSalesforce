@@ -1,0 +1,6 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	<aura:method name="childMsg" action="{! c.getMsg}" access="public">
+        <aura:attribute name="msg1" type="String"/>
+        <aura:attribute name="msg2" type="String"/>       
+    </aura:method>
+</aura:component>

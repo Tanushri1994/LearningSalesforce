@@ -1,0 +1,24 @@
+<apex:page standardController="Account" >
+    <apex:form >
+        <apex:pageBlock title="Account Detail">
+        
+            <apex:pageBlockSection title="Account Information">
+                <apex:outputField value="{!Account.ownerId}"/>
+                <apex:OutputField value="{!Account.name}"/>
+                <apex:OutputField value="{!Account.rating}"/>
+                <apex:OutputField value="{!Account.phone}"/>
+            </apex:pageBlockSection>
+            
+        
+            <apex:pageBlockSection title="Description Information">
+                <apex:outputField value="{!Account.description}"/>
+            </apex:pageBlockSection>
+            
+            <apex:pageblockButtons >
+                <apex:commandButton action="{!Edit}" value="Edit"/>
+                <apex:commandButton action="{!Cancel}" value="Cancel"/>
+            </apex:pageblockButtons>
+        
+        </apex:pageBlock>    
+    </apex:form>
+</apex:page>

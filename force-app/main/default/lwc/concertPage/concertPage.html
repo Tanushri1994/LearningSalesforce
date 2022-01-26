@@ -1,0 +1,19 @@
+<template>
+    <lightning-card>
+    <lightning-combobox
+            name="progress"
+            label="Location"
+            value={value}
+            placeholder="Select Location"
+            options={TypeOptions}
+            onchange={handleChange} ></lightning-combobox>
+    
+    <p>Selected location is: {value}</p>
+    </lightning-card>
+     <br/> 
+     <br/> 
+    <lightning-card>
+    <c-grab-concerts-by-location selectedlocation={value}></c-grab-concerts-by-location>
+    </lightning-card>
+    
+    </template>

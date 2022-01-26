@@ -1,0 +1,61 @@
+<template>
+<template if:true={concertList}>
+Showing Concert for {selectedlocation}   
+
+<!--
+<template if:true={concertList}>
+    <lightning-datatable data={concertList} columns={columns} key-field="Id">
+    </lightning-datatable>
+</template>
+<template if:true={error}>
+    {error}
+</template> 
+-->
+
+ 
+<table class="slds-table slds-table_cell-buffer slds-table_bordered" aria-labelledby="element-with-table-label other-element-with-table-label">
+<thead>
+<tr class="slds-line-height_reset">
+ <th class="" scope="col">
+<div class="slds-truncate" title="Concert Name">Concert Name</div>
+</th>
+<th class="" scope="col">
+<div class="slds-truncate" title="Venue">Venue</div>
+</th>
+<th class="" scope="col">
+<div class="slds-truncate" title="Date">Date</div>
+</th>
+<th class="" scope="col">
+<div class="slds-truncate" title="Tickets_Avaialble">Tickets Avaialble</div>
+</th>
+<th class="" scope="col">
+<div class="slds-truncate" title="Tickets_Remaining">Tickets Remaining</div>
+</th>
+ </tr>
+</thead>
+<tbody >
+    <template for:each={concertList} for:item="concert">
+<tr key={concert.Id} class="slds-hint-parent" >
+<th data-label="Concert Name" scope="row">
+<div class="slds-truncate" title="Cloudhub">
+ <lightning-button label={concert.Name} value ={concert.Id}  onclick={navigateToConcertRecordPage} class="slds-m-left_x-small"></lightning-button>
+</div>
+</th>
+<td data-label="Venue">
+<div class="slds-truncate" title="Venue">{concert.Venue__c}</div>
+</td>
+<td data-label="Date">
+<div class="slds-truncate" title="Date">{concert.Date_of_concert__c}</div>
+</td>
+<td data-label="Tickets Avaialble">
+<div class="slds-truncate" title="Tickets Avaialble">{concert.Tickets_Available__c}</div>
+</td>
+<td data-label="Tickets Remaining">
+<div class="slds-truncate" title="20%">{concert.Tickets_Remaining__c}</div>
+</td>
+ </tr> 
+</template>
+</tbody>
+</table>
+</template>
+</template>

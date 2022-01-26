@@ -1,0 +1,21 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="myresult" type="Integer"/> 
+    <div class="demo-only demo-only--sizing slds-grid slds-wrap">
+        <div class="slds-size_1-of-2" >
+            <lightning:input type="number" aura:id="fnumber" name="num1" label="Enter first number" placeholder="type here..."/>
+            
+        </div>
+        <div class="slds-size_1-of-2">
+            <lightning:input type="number" aura:id="snumber" name="num2" label="Enter second number" placeholder="type here..."/>
+        </div>
+    </div>    
+    <div class="slds-align_absolute-center" style="height:5rem">
+    <lightning:buttonGroup>
+    <lightning:button label="Addition" variant="brand"  onclick="{! c.handleClick }" />
+    <lightning:button label="Substraction" variant="brand"  onclick="{! c.handleClick }" /> 
+    <lightning:button label="Multiplication" variant="brand"  onclick="{! c.handleClick }" />
+    <lightning:button label="Divide" variant="brand" onclick="{! c.handleClick }" />
+    </lightning:buttonGroup> 
+       </div>
+    Result : {!v.myresult}
+    </aura:component>
